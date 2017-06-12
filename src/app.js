@@ -6,5 +6,14 @@ import PetListView from 'app/views/pet_list_view';
 
 $(document).ready(function() {
 
+  var PetList = new PetList();
+  PetList.fetch();
+  
+  var options = {
+    el: $('#application')
+    model: PetList
+  };
+  var application = new PetListView(options);
+  application.render();
 
 });
